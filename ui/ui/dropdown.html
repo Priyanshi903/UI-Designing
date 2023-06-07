@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <style>
+        .navButton {
+            background-color: aquamarine;
+            padding: 11px 25px;
+            width: 100px;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* this turns the dropdown off when not used */
+        .dropdown {
+            display: none;
+            position: absolute;
+            z-index: 99;
+            padding-top: 13px;
+            /* shifting dropdown to the left */
+            margin-left: -25px;
+        }
+
+        .dropdown .navButton {
+            background-color: rgba(255, 0, 0, 0.726);
+        }
+
+        .dropdown .navButton:hover {
+            background-color: rgba(255, 251, 0, 0.726);
+            transition-duration: 500ms;
+        }
+
+        /* this turns the dropdown back on during hover */
+        .navButton:hover .dropdown {
+            display: block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navButton">
+            <a href="#">Home</a>
+        </div>
+        <div class="navButton">
+            <a href="#">Product</a>
+            <div class="dropdown">
+                <div class="navButton">
+                    <a href="#">Item1</a>
+                </div>
+                <div class="navButton">
+                    <a href="#">Item2</a>
+                </div>
+                <div class="navButton">
+                    <a href="#">Item3</a>
+                </div>
+            </div>
+        </div>
+        <div class="navButton">
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+</body>
+
+</html>
